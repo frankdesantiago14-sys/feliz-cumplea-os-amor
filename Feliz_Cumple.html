@@ -369,7 +369,9 @@ audio.pause()
 
 }
 </script>
-
+<audio id="audio">
+<source src="musica.mp3" type="audio/mp3">
+</audio>
   <div id="intro">
     <div class="intro-stars" id="introStars"></div>
     <div class="intro-card">
@@ -398,7 +400,7 @@ audio.pause()
         <div class="cosmic-dust"></div>
       </div>
       <p class="interlude-text">"Dicen que el universo entero nació de una gran explosión... pero el mío empezó de verdad el día en que te conocí."</p>
-      <span class="interlude-hint">Toca la estrella para encender nuestro universo 💫</span>
+      <span onclick="abrir()" class="interlude-hint">Toca la estrella para encender nuestro universo 💫</span>
     </div>
   </div>
 
