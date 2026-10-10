@@ -343,33 +343,7 @@
 </head>
 <body>
 
-<audio id="musica" autoplay loop>
-  <source src="musica.mp3" type="audio/mpeg">
-</audio>
 
-<script>
-function abrir(){
-
-document.getElementById("inicio").style.display="none"
-document.getElementById("contenido").style.display="block"
-
-document.getElementById("audio").play()
-audio.play()
-}
-
-function musica(){
-
-let audio = document.getElementById("audio")
-
-if(audio.paused){
-audio.play()
-}else{
-audio.pause()
-}
-
-}
-</script>
-  <button onclick="abrir()">🎵 Música</button>
 <audio id="audio">
 <source src="musica.mp3" type="audio/mp3">
 </audio>
@@ -401,7 +375,7 @@ audio.pause()
         <div class="cosmic-dust"></div>
       </div>
       <p class="interlude-text">"Dicen que el universo entero nació de una gran explosión... pero el mío empezó de verdad el día en que te conocí."</p>
-      <span onclick="abrir()" class="interlude-hint">Toca la estrella para encender nuestro universo 💫</span>
+      <span class="interlude-hint">Toca la estrella para encender nuestro universo 💫</span>
     </div>
   </div>
 
@@ -435,7 +409,6 @@ audio.pause()
         <button id="closeConfigBtn" class="close-btn">&times;</button>
       </div>
       <div class="config-modal-body">
-         <button onclick="musica()">🎵 Música</button>
         <div class="form-group"><label for="cfgTitle">Título de Inicio:</label><input type="text" id="cfgTitle" placeholder="Una Galaxia de Amor para Ti"></div>
         <div class="form-group"><label for="cfgSubtitle">Subtítulo de Inicio:</label><input type="text" id="cfgSubtitle" placeholder="Feliz Cumpleaños, Amor"></div>
         <div class="form-group"><label for="cfgBtnText">Texto del Botón:</label><input type="text" id="cfgBtnText" placeholder="Entrar a Nuestro Universo"></div>
