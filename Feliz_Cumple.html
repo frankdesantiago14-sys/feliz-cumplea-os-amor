@@ -348,15 +348,26 @@
 </audio>
 
 <script>
-  window.addEventListener("load", () => {
-    const musica = document.getElementById("musica");
-    musica.volume = 0.7;
+function abrir(){
 
-    musica.play().catch(() => {
-      document.getElementById("estado").textContent =
-        "Pulsa el corazón para comenzar la música ❤️";
-    });
-  });
+document.getElementById("inicio").style.display="none"
+document.getElementById("contenido").style.display="block"
+
+document.getElementById("audio").play()
+audio.play()
+}
+
+function musica(){
+
+let audio = document.getElementById("audio")
+
+if(audio.paused){
+audio.play()
+}else{
+audio.pause()
+}
+
+}
 </script>
 
   <div id="intro">
