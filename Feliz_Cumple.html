@@ -474,8 +474,8 @@ audio.pause()
       </div>
     </div>
   </div>
+ <audio id="galaxySong" src="musica.mp3" preload="auto" loop></audio>
 
-  <div id="secretZone" class="secret-zone"></div>
 
   <script id="main-script">
   (function(){
@@ -1189,6 +1189,13 @@ audio.pause()
     function init(){
       createIntroStars();applyToDOM();
       document.getElementById('introBtn').addEventListener('click', () => {
+        const song = document.getElementById('galaxySong');
+        if (song) {
+          song.volume = 0.75;
+          song.play().catch(error => {
+            console.warn('No se pudo reproducir la canción. Verifica que cancion.mp3 esté junto al HTML.', error);
+          });
+        }
         document.getElementById('intro').classList.add('hidden');
         document.getElementById('interludeScreen').classList.remove('hidden');
         introActive = false;
